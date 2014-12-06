@@ -74,7 +74,11 @@ public class PlayerController : MonoBehaviour
 
 		// Align self
 		Vector3 facing = RigidBody.velocity.normalized;
-		transform.forward = facing;
+
+		if (facing.sqrMagnitude > 0.1f)
+		{
+			transform.forward = facing;
+		}
 	}
 
 	public bool BeginTow(BasicCrateController crate_)
