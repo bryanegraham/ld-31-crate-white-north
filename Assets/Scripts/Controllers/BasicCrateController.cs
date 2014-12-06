@@ -53,9 +53,13 @@ public class BasicCrateController : MonoBehaviour
 		{
 			other = subject.GetComponent<PlayerController>();
 		}
-
+		else if (subject.tag == "Terrain")
+		{
+			return;
+		}
 		Debug.Log("[!] Collide with " + subject.name);
-	
+
+
 		if (null == Owner)
 		{
 			OnCollideWhileUnOwned(collision, other);
