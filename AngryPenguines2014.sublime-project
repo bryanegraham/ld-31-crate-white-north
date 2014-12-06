@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path":"Assets"
+			,"file_include_patterns":["*.cs","*.txt"]
+		}
+	]
+}
