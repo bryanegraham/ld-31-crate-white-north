@@ -59,7 +59,7 @@
 			"file": "Assets/Scripts/Controllers/PlayerController.cs",
 			"settings":
 			{
-				"buffer_size": 1597,
+				"buffer_size": 1641,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +75,7 @@
 			"file": "Assets/Scripts/Controllers/BasicCrateController.cs",
 			"settings":
 			{
-				"buffer_size": 2438,
+				"buffer_size": 2493,
 				"line_ending": "Unix"
 			}
 		}
@@ -126,16 +126,7 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/bryan/Projects/AngryPenguines2014/Assets",
-		"/Users/bryan/Projects/AngryPenguines2014/Assets/Scripts",
-		"/Users/bryan/Projects/AngryPenguines2014/Assets/Scripts/Controllers",
-		"/Users/bryan/Projects/AngryPenguines2014/Assets/Standard Assets",
-		"/Users/bryan/Projects/AngryPenguines2014/Assets/Standard Assets/Character Controllers",
-		"/Users/bryan/Projects/AngryPenguines2014/Assets/Standard Assets/Character Controllers/Sources",
-		"/Users/bryan/Projects/AngryPenguines2014/Assets/Standard Assets/Character Controllers/Sources/PrototypeCharacter",
-		"/Users/bryan/Projects/AngryPenguines2014/Assets/Standard Assets/Character Controllers/Sources/PrototypeCharacter/Materials",
-		"/Users/bryan/Projects/AngryPenguines2014/Assets/Standard Assets/Character Controllers/Sources/PrototypeCharacter/Textures",
-		"/Users/bryan/Projects/AngryPenguines2014/Assets/Standard Assets/Character Controllers/Sources/Scripts"
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets"
 	],
 	"file_history":
 	[
@@ -205,26 +196,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1597,
+						"buffer_size": 1641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1295,
-								1295
+								1481,
+								1481
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C#/C#.tmLanguage"
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 685.0,
+						"translation.x": -0.0,
+						"translation.y": 698.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -253,7 +245,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -262,15 +254,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2438,
+						"buffer_size": 2493,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								794,
-								794
+								1358,
+								1358
 							]
 						],
 						"settings":
@@ -279,7 +271,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 640.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
