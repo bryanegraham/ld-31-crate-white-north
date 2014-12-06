@@ -2,8 +2,9 @@
 	"folders":
 	[
 		{
-			"path":"Assets"
-			,"file_include_patterns":["*.cs","*.txt"]
+			"path":"./"
+			,"file_include_patterns":["*.cs","*.txt", "*.md"]
+			,"folder_exclude_patterns":[".hg*", "Temp", "Library"]
 		}
 	]
 }
