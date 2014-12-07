@@ -78,6 +78,16 @@ public class BasicCrateController : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
+		SledInVolume(other);
+	}
+
+	void OnTriggerStay(Collider other)
+	{
+		SledInVolume(other);
+	}
+
+	private void SledInVolume(Collider other)
+	{
 		if (null != other.transform.parent)
 		{
 			GameObject subject = other.transform.parent.gameObject;
