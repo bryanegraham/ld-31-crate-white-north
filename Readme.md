@@ -15,3 +15,4 @@ Snowmobile Curling Champoinship 2014
 
 ## SFX Sources ##
 **Sad Trombone** - https://www.freesound.org/people/Benboncan/sounds/73581/
+**Fanfare** - https://www.freesound.org/people/Timbre/sounds/110317/
