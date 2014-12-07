@@ -2,13 +2,8 @@ using UnityEngine;
 
 class SideTriggerController : MonoBehaviour
 {
-	public GameManager.Side side;
-
-	void Stat()
-	{
-
-	}
-
+	public GameManager.Side side = GameManager.Side.LEFT;
+	
 	void OnTriggerEnter(Collider coll)
 	{
 		TriggerAction(coll, true);

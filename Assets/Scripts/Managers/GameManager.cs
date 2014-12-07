@@ -16,10 +16,17 @@ class GameManager : MonoBehaviour
 	public int GameDuration = 300;
 
 	public float TimeRemaining;
-	public bool GameRunning = true;
+	public bool GameRunning = false;
 
-	public GameObject[] IndestructableCrates;
-	public GameObject[] Players;
+	public GameObject[] IndestructableCrates = null;
+	public GameObject[] Players = null;
+
+	public delegate void OnSetupGame();
+	public delegate void OnStartGame();
+	public delegate void OnEndGame(int[] score);
+
+	public OnSetupGame GameSetupListeners;
+	public OnEndGame GameEndListeners;
 
 	void Start()
 	{
@@ -31,8 +38,6 @@ class GameManager : MonoBehaviour
 		{
 			Destroy(this);
 		}
-
-		SetupGame();
 	}
 
 	void Update()
@@ -41,7 +46,7 @@ class GameManager : MonoBehaviour
 		{
 			TimeRemaining -= Time.deltaTime;
 
-			if (TimeRemaining <= 0f)
+			if (TimeRemaining <= 0f || Input.GetKey(KeyCode.Escape))
 			{
 				EndGame();
 			}
@@ -53,21 +58,35 @@ class GameManager : MonoBehaviour
 		Score[(int)side] += value;
 	}
 
+	public void ExitGame()
+	{
+		Application.Quit();
+	}
+
 	public void SetupGame()
 	{
 		TimeRemaining = (float)GameDuration;
+		Score[0] = Score[1] = 0;
 		RepositionPlayers();
 		RepositionCrates();
+
+		if (GameSetupListeners != null)
+		{
+			GameSetupListeners();
+		}
 	}
 
 	public void StartGame()
 	{
+		SetupGame();
+
 		GameRunning = true;
 	}
 
 	public void EndGame()
 	{
 		GameRunning = false;
+		GameEndListeners(Score);
 	}
 
 	private void RepositionPlayers()

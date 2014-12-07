@@ -26,58 +26,61 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		maxVelocitySquared = maxVelocity * maxVelocity;
-
-		Vector3 impulse = Vector3.zero;
-
-		// Locomotion
-		if (Input.GetKey(Up))
-			impulse.z = 1;
-		else if (Input.GetKey(Down))
-			impulse.z = -1;
-
-		if (Input.GetKey(Left))
-			impulse.x = -1;
-		else if (Input.GetKey(Right))
-			impulse.x = 1;
-
-		impulse.Normalize();
-
-		if (null != crate)
+		if (GameManager.Instance.GameRunning)
 		{
-			impulse *= impulseMagnitude - crate.GetDrag();
-		}
-		else
-		{
-			impulse *= impulseMagnitude;
-		}
+			maxVelocitySquared = maxVelocity * maxVelocity;
 
-		rb.velocity += impulse;
+			Vector3 impulse = Vector3.zero;
 
-		if (rb.velocity.sqrMagnitude > maxVelocitySquared)
-		{
-			Vector3 clampedVelocity = rb.velocity.normalized * maxVelocity;
-			rb.velocity = clampedVelocity;
-		}
+			// Locomotion
+			if (Input.GetKey(Up))
+				impulse.z = 1;
+			else if (Input.GetKey(Down))
+				impulse.z = -1;
 
-		// Crate control
-		if (Input.GetKeyUp(Release) && null != crate)
-		{
-			crate.Owner = null;
-			crate = null;
-		}
+			if (Input.GetKey(Left))
+				impulse.x = -1;
+			else if (Input.GetKey(Right))
+				impulse.x = 1;
 
-		if (crate != null && crate.Owner != this)
-		{
-			crate = null;
-		}
+			impulse.Normalize();
 
-		// Align self
-		Vector3 facing = rb.velocity.normalized;
+			if (null != crate)
+			{
+				impulse *= impulseMagnitude - crate.GetDrag();
+			}
+			else
+			{
+				impulse *= impulseMagnitude;
+			}
 
-		if (facing.sqrMagnitude > 0.1f)
-		{
-			transform.forward = facing;
+			rb.velocity += impulse;
+
+			if (rb.velocity.sqrMagnitude > maxVelocitySquared)
+			{
+				Vector3 clampedVelocity = rb.velocity.normalized * maxVelocity;
+				rb.velocity = clampedVelocity;
+			}
+
+			// Crate control
+			if (Input.GetKeyUp(Release) && null != crate)
+			{
+				crate.Owner = null;
+				crate = null;
+			}
+
+			if (crate != null && crate.Owner != this)
+			{
+				crate = null;
+			}
+
+			// Align self
+			Vector3 facing = rb.velocity.normalized;
+
+			if (facing.sqrMagnitude > 0.1f)
+			{
+				transform.forward = facing;
+			}
 		}
 	}
 
