@@ -4,7 +4,7 @@ using System.Collections;
 public class DampingController : MonoBehaviour 
 {
 	public float dampRate = 1f;	
-	public Rigidbody RigidBody;
+	public Rigidbody rb;
 
 	// Use this for initialization
 	void Start () 
@@ -15,9 +15,9 @@ public class DampingController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (null != RigidBody)
+		if (null != rb)
 		{
-			RigidBody.velocity = Vector3.Lerp(RigidBody.velocity, Vector3.zero, dampRate * Time.deltaTime);
+			rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, dampRate * Time.deltaTime);
 		}
 	}
 }

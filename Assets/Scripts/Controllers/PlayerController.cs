@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 	public float impulseMagnitude = 1f;
 	public float maxVelocity = 100f;
 
-	public Rigidbody RigidBody;
+	public Rigidbody rb;
 
 	public KeyCode Up;
 	public KeyCode Down;
@@ -52,16 +52,16 @@ public class PlayerController : MonoBehaviour
 			impulse *= impulseMagnitude;
 		}
 
-		RigidBody.velocity += impulse;
+		rb.velocity += impulse;
 
-		if (RigidBody.velocity.sqrMagnitude > maxVelocitySquared)
+		if (rb.velocity.sqrMagnitude > maxVelocitySquared)
 		{
-			Vector3 clampedVelocity = RigidBody.velocity.normalized * maxVelocity;
-			RigidBody.velocity = clampedVelocity;
+			Vector3 clampedVelocity = rb.velocity.normalized * maxVelocity;
+			rb.velocity = clampedVelocity;
 		}
 
 		// Crate control
-		if (Input.GetKey(Release) && null != crate)
+		if (Input.GetKeyUp(Release) && null != crate)
 		{
 			crate.Owner = null;
 			crate = null;
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
 		}
 
 		// Align self
-		Vector3 facing = RigidBody.velocity.normalized;
+		Vector3 facing = rb.velocity.normalized;
 
 		if (facing.sqrMagnitude > 0.1f)
 		{
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
 	public bool BeginTow(BasicCrateController crate_)
 	{
-		if (null == crate)
+		if (null == crate && Input.GetKey(Release) || Input.GetKeyDown(Release))
 		{
 			crate = crate_;
 			return true;
