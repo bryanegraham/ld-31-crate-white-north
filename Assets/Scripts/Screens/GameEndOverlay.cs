@@ -22,7 +22,7 @@ class GameEndOverlay : MonoBehaviour
 
 		OnScreenPos = Panel.transform.position;
 		OffScreenPos = Panel.transform.position;
-		OffScreenPos.y -= 600;
+		OffScreenPos.y -= 8000;
 
 		targetPosition = OnScreenPos;
 	}
@@ -63,5 +63,9 @@ class GameEndOverlay : MonoBehaviour
 	public void OnSetupGame()
 	{
 		targetPosition = OffScreenPos;
+
+		Player1WinsImage.SetActive(false);
+		Player2WinsImage.SetActive(false);
+		TieGameImage.SetActive(false);
 	}
 }
