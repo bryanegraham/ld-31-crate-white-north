@@ -99,6 +99,7 @@ class GameManager : MonoBehaviour
 
 		Players[0].transform.position = new Vector3(-2f, 0f, 0f);
 		Players[1].transform.position = new Vector3(2f, 0f, 0f);
+		Players[0].transform.eulerAngles = new Vector3(0f, 0f, 0f);
 		Players[1].transform.eulerAngles = new Vector3(0f, 180f, 0f);
 	}
 
@@ -119,6 +120,8 @@ class GameManager : MonoBehaviour
 
 			IndestructableCrates[i].transform.position = new Vector3(x, y, z);
 			IndestructableCrates[i].transform.eulerAngles = new Vector3(0f, 0f, 0f);
+			IndestructableCrates[i].rigidbody.velocity = Vector3.zero;
+			IndestructableCrates[i].rigidbody.angularVelocity = Vector3.zero;
 
 		}
 	}
