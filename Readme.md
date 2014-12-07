@@ -14,5 +14,5 @@ Snowmobile Curling Champoinship 2014
 -**By** bart <http://opengameart.org/users/bart>
 
 ## SFX Sources ##
-**Sad Trombone** - https://www.freesound.org/people/Benboncan/sounds/73581/
+**Sad Trombone** - https://www.freesound.org/people/Benboncan/sounds/73581/ ||
 **Fanfare** - https://www.freesound.org/people/Timbre/sounds/110317/
