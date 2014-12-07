@@ -30,3 +30,13 @@ Snowmobile Curling Champoinship 2014
 
 **Wood and metal explosion** - https://www.freesound.org/people/skyklan47/sounds/193478/  
 
+**Thunderous applause** - https://www.freesound.org/people/peridactyloptrix/sounds/196094/  
+
+**Quick smash 01** - https://www.freesound.org/people/JoelAudio/sounds/135465/  
+
+**Quick smash 02** - https://www.freesound.org/people/JoelAudio/sounds/135461/   
+
+**Quick smash 03** - https://www.freesound.org/people/JoelAudio/sounds/135463/  
+
+**Quick smash debris** - https://www.freesound.org/people/JoelAudio/sounds/135459/
+
