@@ -9,6 +9,8 @@ public class BasicCrateController : MonoBehaviour
 	public PlayerController Owner;
 	public LineRenderer line;
 
+	public int pointsValue = 1;
+
 	public float followDampRate = 2f;
 	public float followEslasticity = 100f;
 	public float maxDistance = 4.0f;
