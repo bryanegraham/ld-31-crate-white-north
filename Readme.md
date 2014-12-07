@@ -5,7 +5,7 @@ Snowmobile Curling Champoinship 2014
 ### A game by: ###
 * Bryan Graham <bryanegraham@gmail.com>
 * Carly Shephard <noelleshephard@gmail.com>
-* And Mattew What-his-pickle <gd37matt@vfs.com>
+* And Matthew What-his-pickle <gd37matthew@vfs.com>
 
 ## Art Sources ##
 
