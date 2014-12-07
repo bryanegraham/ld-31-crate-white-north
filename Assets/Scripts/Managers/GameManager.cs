@@ -53,13 +53,13 @@ class GameManager : MonoBehaviour
 		}
 	}
 
-	public void ModifyPoints(Side side, int value)
-	{
-		Score[(int)side] += value;
-	}
-
 	public void ExitGame()
 	{
+		if (GameRunning)
+		{
+			Debug.LogError("Quit Message recieved while game was running. What the heck?!");
+			return;
+		}	
 		Application.Quit();
 	}
 
@@ -78,8 +78,13 @@ class GameManager : MonoBehaviour
 
 	public void StartGame()
 	{
-		SetupGame();
+		if (GameRunning)
+		{
+			Debug.LogError("Start Game was called a second time! Check the callstack!");
+			return;
+		}
 
+		SetupGame();
 		GameRunning = true;
 	}
 
