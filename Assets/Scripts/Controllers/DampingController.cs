@@ -5,12 +5,6 @@ public class DampingController : MonoBehaviour
 {
 	public float dampRate = 1f;	
 	public Rigidbody rb;
-
-	// Use this for initialization
-	void Start () 
-	{
-		
-	}
 	
 	// Update is called once per frame
 	void Update () 
