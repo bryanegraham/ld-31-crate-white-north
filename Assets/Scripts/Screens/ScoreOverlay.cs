@@ -26,7 +26,7 @@ class ScoreOverlay : MonoBehaviour
 			RightScore.text = GameManager.Instance.Score[(int)GameManager.Side.RIGHT].ToString();
 
 			span = TimeSpan.FromSeconds((double)GameManager.Instance.TimeRemaining);
-			ScoreClock.text = span.Minutes + ":" + span.Seconds;
+			ScoreClock.text = span.Minutes + ":" + span.Seconds.ToString("00");
 		}
 	}
 
