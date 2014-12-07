@@ -5,18 +5,21 @@ public class BasicCrateController : MonoBehaviour
 {
 	public static float HeaviestCrate = 100f;
 	
-	public Rigidbody RigidBody;
+	public Rigidbody rb;
 	public PlayerController Owner;
 	public LineRenderer line;
 
 	public float followDampRate = 2f;
 	public float followEslasticity = 100f;
-	public float maxDistance = 1.5f;
+	public float maxDistance = 4.0f;
+	public float followDistance = 1.5f;
+	public float maxAttachVelocity = 10f;
 
 	// Use this for initialization
 	void Start () 
 	{
 		line = GetComponent<LineRenderer>();
+		line.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -24,19 +27,20 @@ public class BasicCrateController : MonoBehaviour
 	{
 		if (null != Owner)
 		{
-			if (Vector3.Distance(transform.position, Owner.transform.position) <= maxDistance)
+			float distance = Vector3.Distance(transform.position, Owner.transform.position);
+			if (distance >= followDistance)
 			{
-				RigidBody.velocity = Vector3.Lerp(RigidBody.velocity, Owner.RigidBody.velocity, followDampRate * Time.deltaTime);
+				Vector3 delta = (Owner.transform.position + (Owner.transform.forward * (-followDistance)) - transform.position).normalized;
+				rb.velocity = Vector3.Lerp(rb.velocity, delta * followEslasticity, followDampRate);
 			}
-			else
-			{
-				Vector3 delta = (Owner.transform.position + (Owner.transform.forward * -1) - transform.position).normalized;
-				RigidBody.velocity = Vector3.Lerp(RigidBody.velocity, delta * followEslasticity, followDampRate);
-			}
+			//else if (distance >= followDistance)
+			//{
+				//rb.velocity = Vector3.Lerp(rb.velocity, Owner.rb.velocity, followDampRate * Time.deltaTime);
+			//}
 
-			line.enabled = true;
 			line.SetPosition(0, transform.position);
 			line.SetPosition(1, Owner.transform.position);
+			line.enabled = true;
 		}
 		else
 		{
@@ -88,7 +92,7 @@ public class BasicCrateController : MonoBehaviour
 
 	public float GetDrag()
 	{
-		return RigidBody.mass / HeaviestCrate;
+		return rb.mass / HeaviestCrate;
 	}
 
 	protected virtual void OnCollideWhileOwned(Collision collision, PlayerController otherPlayer)
@@ -103,10 +107,13 @@ public class BasicCrateController : MonoBehaviour
 
 	protected virtual void OnClaimedByPlayer(PlayerController controller)
 	{
-		if (controller.BeginTow(this))
+		if (rb.velocity.magnitude <= maxAttachVelocity)
 		{
-			Owner = controller;
-			RigidBody.angularVelocity = Vector3.zero;
+			if (controller.BeginTow(this))
+			{
+				Owner = controller;
+				rb.angularVelocity = Vector3.zero;
+			}
 		}
 	}
 
