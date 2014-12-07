@@ -6,6 +6,17 @@ public class PenguinController : MonoBehaviour
 	public float maxSpeed = 30f;
 	public float dampRate = 3f;
 
+	void Start()
+	{
+		GameManager.Instance.GameSetupListeners += OnGameSetup;
+	}
+
+	void OnGameSetup()
+	{
+		GameManager.Instance.GameSetupListeners -= OnGameSetup;
+		Destroy(gameObject);
+	}
+
 	void Update()
 	{
 		if (rigidbody.velocity.sqrMagnitude < (maxSpeed * maxSpeed))
