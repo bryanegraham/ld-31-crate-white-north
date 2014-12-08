@@ -49,4 +49,10 @@ Snowmobile Curling Champoinship 2014
 
 **Attitude** - VFS music library  
 
-**Visionary** - VFS music library
+**Visionary** - VFS music library  
+
+
+## VFX Sources ##  
+
+
+**Snow effect** - Elementals **by** G.E.TeamDev  **Source** - https://www.assetstore.unity3d.com/en/#!/content/11158
