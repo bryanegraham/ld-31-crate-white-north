@@ -21,7 +21,7 @@ class GameAudioEventsController : MonoBehaviour
 	void OnGameSetup()
 	{
 		//Band.clip = BeginGame;
-		//Band.Play();
+		Crowd.Stop();
 	}
 
 	void OnGameEnd(int[] scores)
