@@ -41,7 +41,7 @@ Snowmobile Curling Champoinship 2014
 **Quick smash debris** - https://www.freesound.org/people/JoelAudio/sounds/135459/  
 
 
-## Music Sources ##  
+## Music Sources 
 
 **I's the B'y** - http://www.5alarmmusic.com/  
 
@@ -52,7 +52,7 @@ Snowmobile Curling Champoinship 2014
 **Visionary** - VFS music library  
 
 
-## VFX Sources ##  
+## VFX Sources 
 
 
 **Snow effect** - Elementals **by** G.E.TeamDev  **Source** - https://www.assetstore.unity3d.com/en/#!/content/11158
