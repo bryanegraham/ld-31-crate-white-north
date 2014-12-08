@@ -24,11 +24,14 @@ Metal crates (the grey ones) are worth 1 point, and wooden crates (the brown one
 
 **Player 1**  
 WASD - move  
-Spacebar - grab crate  
+Hold spacebar - grab crate
+Release spacebar - release crate 
 
 **Player 2**  
 Arrow keys - move  
-R shift - grab crate
+Hold R shift - grab crate  
+Release R shift - release crate
+
 
 
 
