@@ -1,4 +1,4 @@
-Snowmobile Curling Champoinship 2014
+Crate White North
 ------------------------------------
 ## Curse of the Perturbed Penguines ##
 
@@ -7,20 +7,21 @@ Snowmobile Curling Champoinship 2014
 * Carly Shephard <noelleshephard@gmail.com>
 * Matthew Kirby <gd37matthew@vfs.com>  
 
+Submitted for your Ludum Dare 31 Enjoyment
 
 ## OVERVIEW
 
 Crate White North is a 2-player competitive game in which players control sentient snowmobiles.  
 
-##HOW TO PLAY
+## HOW TO PLAY
 
 Get as many crates as you can into your opponents end of the rink by any means necessary! 
 
-##SCORING  
+## SCORING  
 
 Metal crates (the grey ones) are worth 1 point, and wooden crates (the brown ones) are worth 2. Be careful though, wooden crates are destructible and some contain mischievous penguins!
 
-##CONTROLS  
+## CONTROLS  
 
 **Player 1**  
 WASD - move  
