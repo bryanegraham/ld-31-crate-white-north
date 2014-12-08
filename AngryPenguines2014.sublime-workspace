@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"OnCollision",
+				"Collider.OnCollisionEnter(?)"
+			],
+			[
+				"AudioSource",
+				"AudioSource.isPlaying"
+			],
+			[
+				"Audio",
+				"AudioClip"
+			],
+			[
+				"GetComponentsInChil",
+				"GameObject.GetComponentsInChildren<T>(includeInactive)"
+			],
+			[
+				"Partcile",
+				"ParticleSystem"
+			],
+			[
+				"Part",
+				"ParticleSystem"
+			],
+			[
+				"Applicatio",
+				"Application.Quit()"
+			],
+			[
+				"OnColli",
+				"Collider.OnCollisionEnter(?)"
+			],
+			[
+				"GetKey",
+				"Input.GetKeyDown(key)"
+			],
+			[
 				"Debug",
 				"Debug.Log(message)"
 			],
@@ -26,10 +62,6 @@
 			[
 				"Vecty",
 				"Vector3(x, y, z)"
-			],
-			[
-				"GetKey",
-				"Input.GetKey(key)"
 			],
 			[
 				"GetK",
@@ -55,30 +87,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Assets/Scripts/Controllers/PlayerController.cs",
-			"settings":
-			{
-				"buffer_size": 1641,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Controllers/DampingController.cs",
-			"settings":
-			{
-				"buffer_size": 408,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Controllers/BasicCrateController.cs",
-			"settings":
-			{
-				"buffer_size": 2493,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -126,10 +134,33 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets"
+		"/Users/bryan/Projects/angry-penguin-simulator-2014",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers"
 	],
 	"file_history":
 	[
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Readme.md",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/Audio/GameAudioEventsController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/Audio/MusicController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/BasicCrateController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/PlayerController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/Audio/AudioEventController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/ParticleLifecycleController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/PenguinController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Managers/GameManager.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Lighting/LightingRig.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/SideTriggerController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/CrateSpawnerController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Screens/ScoreOverlay.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Screens/GameEndOverlay.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/PenguinCrateController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/PlayerIndicatorController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/DampingController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Controllers/DestructingCrateController.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/Assets/Scripts/Screens/DisableUIEventsOnGameStart.cs",
+		"/Users/bryan/Projects/angry-penguin-simulator-2014/AngryPenguines2014.sublime-project",
 		"/Users/bryan/Projects/AngryPenguines2014/Assets/Scripts/Controllers/DampingController",
 		"/Users/bryan/Projects/AngryPenguines2014/AngryPenguines2014.sublime-project",
 		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
@@ -155,20 +186,25 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"GameEndListeners",
+			"StartGame",
+			"Destroy",
+			"RigidBody",
 			"#"
 		],
 		"highlight": true,
@@ -177,6 +213,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"rb"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -187,96 +224,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Assets/Scripts/Controllers/PlayerController.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1641,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1481,
-								1481
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 698.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/Controllers/DampingController.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 408,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								408
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/Controllers/BasicCrateController.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2493,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1358,
-								1358
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 640.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -326,6 +275,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"playercontro",
+				"Assets/Scripts/Controllers/PlayerController.cs"
+			],
+			[
+				"gamemanager",
+				"Assets/Scripts/Managers/GameManager.cs"
+			]
 		],
 		"width": 0.0
 	},
