@@ -8,11 +8,11 @@ Snowmobile Curling Champoinship 2014
 * Matthew Kirby <gd37matthew@vfs.com>  
 
 
-## OVERVIEW ##  
+## OVERVIEW
 
 Crate White North is a 2-player competitive game in which players control sentient snowmobiles.  
 
-##HOW TO PLAY##  
+##HOW TO PLAY
 
 Get as many crates as you can into your opponents end of the rink by any means necessary! 
 
