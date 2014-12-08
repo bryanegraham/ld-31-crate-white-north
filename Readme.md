@@ -45,5 +45,9 @@ Snowmobile Curling Champoinship 2014
 
 **I's the B'y** - http://www.5alarmmusic.com/  
 
-**The Maple Leaf Forever** - http://www.5alarmmusic.com/
+**The Maple Leaf Forever** - http://www.5alarmmusic.com/  
+
+**Attitude** - VFS music library  
+
+**Visionary** - VFS music library  
 
