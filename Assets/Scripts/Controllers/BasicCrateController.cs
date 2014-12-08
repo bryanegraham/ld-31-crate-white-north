@@ -9,6 +9,8 @@ public class BasicCrateController : MonoBehaviour
 	public PlayerController Owner;
 	public LineRenderer line;
 
+	public AudioEventController AudioEvents;
+
 	public int pointsValue = 1;
 
 	public float followDampRate = 2f;
@@ -22,6 +24,11 @@ public class BasicCrateController : MonoBehaviour
 	{
 		line = GetComponent<LineRenderer>();
 		line.enabled = false;
+
+		if (null == AudioEvents)
+		{
+			AudioEvents = gameObject.GetComponent<AudioEventController>();
+		}
 	}
 	
 	// Update is called once per frame
@@ -74,6 +81,8 @@ public class BasicCrateController : MonoBehaviour
 		{
 			OnCollideWhileOwned(collision, other);
 		}
+
+		AudioEvents.Event("Crash");
 	}
 
 	void OnTriggerEnter(Collider other)

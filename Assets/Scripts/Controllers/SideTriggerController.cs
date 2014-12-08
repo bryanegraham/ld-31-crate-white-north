@@ -7,24 +7,44 @@ class SideTriggerController : MonoBehaviour
 	
 	public List<BasicCrateController> Crates = new List<BasicCrateController>();
 
+	void Start()
+	{
+		GameManager.Instance.GameEndListeners += OnEndGame;
+		GameManager.Instance.GameSetupListeners += OnSetupGame;
+	}
+
+	void OnSetupGame()
+	{
+		this.enabled = true;
+	}
+
+	void OnEndGame(int[] score)
+	{
+		Crates.Clear();
+		this.enabled = false;
+	}
+
 	void Update()
 	{
-		int score = 0;
-		int idx = 0;
-		while (idx < Crates.Count)
+		if (GameManager.Instance.GameRunning)
 		{
-			if (!Crates[idx].gameObject.activeSelf)
+			int score = 0;
+			int idx = 0;
+			while (idx < Crates.Count)
 			{
-				Crates.RemoveAt(idx);
+				if (null == Crates[idx] || !Crates[idx].gameObject.activeSelf)
+				{
+					Crates.RemoveAt(idx);
+				}
+				else
+				{
+					score += Crates[idx].pointsValue;
+					idx++;
+				}
 			}
-			else
-			{
-				score += Crates[idx].pointsValue;
-				idx++;
-			}
-		}
 
-		GameManager.Instance.Score[(int)side] = score;
+			GameManager.Instance.Score[(int)side] = score;
+		}
 	}
 
 	void OnTriggerEnter(Collider coll)
