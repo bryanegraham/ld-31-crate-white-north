@@ -38,5 +38,12 @@ Snowmobile Curling Champoinship 2014
 
 **Quick smash 03** - https://www.freesound.org/people/JoelAudio/sounds/135463/  
 
-**Quick smash debris** - https://www.freesound.org/people/JoelAudio/sounds/135459/
+**Quick smash debris** - https://www.freesound.org/people/JoelAudio/sounds/135459/  
+
+
+## Music Sources ##  
+
+**I's the B'y** - http://www.5alarmmusic.com/  
+
+**The Maple Leaf Forever** - http://www.5alarmmusic.com/
 
