@@ -16,6 +16,22 @@ Crate White North is a 2-player competitive game in which players control sentie
 
 Get as many crates as you can into your opponents end of the rink by any means necessary! 
 
+##SCORING  
+
+Metal crates (the grey ones) are worth 1 point, and wooden crates (the brown ones) are worth 2. Be careful though, wooden crates are destructible and some contain mischievous penguins!
+
+##CONTROLS  
+
+**Player 1**  
+WASD - move  
+Spacebar - grab crate  
+
+**Player 2**  
+Arrow keys - move  
+R shift - grab crate
+
+
+
 ## Art Sources ##
 
 **Snow Texture:**
