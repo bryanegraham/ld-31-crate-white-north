@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 	public float maxVelocity = 100f;
 
 	public Rigidbody rb;
+	public AudioEventController AudioEvents;
 
 	public KeyCode Up;
 	public KeyCode Down;
@@ -82,6 +83,11 @@ public class PlayerController : MonoBehaviour
 				transform.forward = facing;
 			}
 		}
+	}
+
+	public void OnCollisionEnter(Collision coll)
+	{
+		AudioEvents.Event("Crash");
 	}
 
 	public bool BeginTow(BasicCrateController crate_)

@@ -21,6 +21,9 @@ class GameManager : MonoBehaviour
 	public GameObject[] IndestructableCrates = null;
 	public GameObject[] Players = null;
 
+	public LightingRig[] LightingRigs;
+	public LightingRig defaultLighting;
+
 	public delegate void OnSetupGame();
 	public delegate void OnStartGame();
 	public delegate void OnEndGame(int[] score);
@@ -38,6 +41,13 @@ class GameManager : MonoBehaviour
 		{
 			Destroy(this);
 		}
+
+		foreach (LightingRig rig in LightingRigs)
+		{
+			rig.DeActivateRig();
+		}
+
+		defaultLighting.ActivateRig();
 	}
 
 	void Update()
@@ -69,6 +79,19 @@ class GameManager : MonoBehaviour
 		Score[0] = Score[1] = 0;
 		RepositionPlayers();
 		RepositionCrates();
+
+		int rigIndex = Random.Range(0, LightingRigs.Length);
+		foreach (LightingRig rig in LightingRigs)
+		{
+			if (rig == LightingRigs[rigIndex])
+			{
+				rig.ActivateRig();
+			}
+			else
+			{
+				rig.DeActivateRig();
+			}
+		}
 
 		if (GameSetupListeners != null)
 		{
