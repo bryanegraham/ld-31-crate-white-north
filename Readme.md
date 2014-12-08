@@ -5,7 +5,7 @@ Snowmobile Curling Champoinship 2014
 ### A game by: ###
 * Bryan Graham <bryanegraham@gmail.com>
 * Carly Shephard <noelleshephard@gmail.com>
-* And Matthew Kirby <gd37matthew@vfs.com>
+* Matthew Kirby <gd37matthew@vfs.com>
 
 ## Art Sources ##
 
@@ -49,5 +49,4 @@ Snowmobile Curling Champoinship 2014
 
 **Attitude** - VFS music library  
 
-**Visionary** - VFS music library  
-
+**Visionary** - VFS music library
