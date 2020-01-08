@@ -2,6 +2,8 @@ Crate White North
 ------------------------------------
 ## Curse of the Perturbed Penguines ##
 
+[Ludum Dare Link](http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=46864)
+
 ### A game by: ###
 * Bryan Graham <bryanegraham@gmail.com>
 * Carly Shephard <noelleshephard@gmail.com>
